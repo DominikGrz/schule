@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Eine tolle Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta lang="de"/>
+    <meta name="author" content=""/>
+    <meta name="description" content="A personal test site."/>
+    <meta name="keywords" content="Abstract, School, Schule, Aufgaben, Projekt, Informatik, Webdesign">
+    <meta name="robots" content="index, follow">
+    <meta name="title" content="A test site">
+    <meta name="audience" content="Everyone">
+</head>
+<body>
+    <div class="bg-blur"></div>
+
+    <div id="side_bar" class="sidebar">
+		<span onclick="sidenav_close();" class="sidebar_but">✖</span>
+		<a href="index.html">home</a>
+		<a href="exercises.php">exercises</a>
+		<a href="#">about</a>
+	</div>
+
+    <span onclick="sidenav_open();" class="sidebar_but">≡</span>
+    
+    <div id="con" class="container">
+        <div class="header">
+			<div id="nav">
+				<nav>
+					<a href="index.html">home</a> <a href="exercises.php">exercises</a> <a href="#" ">about</a>
+				</nav>
+			</div><a data-active="active" id="icon-link" onclick="check_night_mode();"><span class="icon" id="m-icon"></span></a>
+            <div class="site-title index">
+                <h1>
+                    Welcome
+                </h1>         
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="entry title">
+                <h2>
+                    index
+                </h2>                  
+            </div>
+            <div class="entry">
+                <div class="entry con">
+                    Lorem ipsum dolor sit amet, congue graeco ne sea. Commune officiis eu pri, cu nec brute inermis. 
+                    Altera deseruisse vim ei, quo in posidonium inciderint signiferumque. Te assum explicari sententiae vix, aperiam epicuri verterem mei ad. 
+                    Detraxit recusabo ad pro. Cu est mazim dicunt scripserit. Mel evertitur disputationi cu, te ignota euismod scribentur vel. 
+                    An duo dolore interpretaris, est omnis errem ne. Vel labitur quaeque cu, vix summo maiestatis ne. 
+                    Pri petentium qualisque eu, melius prompta adipiscing eos in, sed mazim sanctus laboramus te. 
+                    Eu est dolorem disputando, mel imperdiet sententiae te, erat assum officiis nec et. 
+                    Mea ea natum possit, est meis eripuit ex, eum et meis laboramus. Eam zril animal eu, apeirian consulatu at cum. 
+                    Et qui scaevola phaedrum definitionem, tota omittam te mei, pri ea denique commune offendit. 
+                    Soleat aliquid te est. Nec ei solum senserit. Suas minimum vix cu. Natum philosophia quo ei, libris doming suscipit no pri. 
+                    Et nullam praesent nec. Esse illum postulant ea per, usu ei putent volumus accumsan. Illud lobortis instructior mei cu. 
+                    Tota integre eum te. Sit te primis phaedrum, ei nam malis quando, ludus principes scribentur ea quo. 
+                    Eam ea affert audiam, an esse labitur urbanitas vel, ne duo corpora nostrum propriae. 
+                    Et congue noster sit, eu eum partiendo prodesset persequeris, mea facer nominavi id. 
+                    Cu eam laudem oportere, fastidii incorrupte efficiendi ad mel. Te percipitur disputationi his, novum dolor nec ea. 
+                    Error dolorem abhorreant vim ut, cum quot epicurei ea. Utinam scripserit mei no. 
+                    Et explicari moderatius appellantur sea, ea solum mandamus quo, in persecuti rationibus vix. 
+                    Nam ea tale fierent elaboraret, ne cum tempor everti ornatus, possit lucilius recusabo ius ne. 
+                    In vis elit honestatis philosophia, weeb his at esse volutpat. Sed te facilis consulatu, pro an fierent detracto, his soleat percipit indoctum an. 
+                    Vel zril dolorem ne. Mel omittam propriae eu. Qui in quot consequuntur. Ea sea mutat illud, ne solum nominati usu. 
+                    Eu illud similique qui, reque electram est an, tota populo feugait id vis. Sea ei discere dolorum. 
+                    Duo quando voluptaria et, feugiat definitionem nec te. Equidem maiestatis cu sed. Ea elit commune appetere duo, vix quem vivendo adipisci te. 
+                    Mea aliquid eruditi philosophia ei, nonumes appareat insolens ad eam. Id regione complectitur sed. 
+                    Eam decore soleat no, facer munere ad mei, detraxit indoctum conclusionemque ad sea. Hinc modus signiferumque te sed, ius eu suscipit salutatus. 
+                    Ea cum vero ludus facete, duo cu cetero maiorum euripidis, eum an mundi dissentias. Eros saperet suscipit cu mea. 
+                    In vero tota qui, etiam vitae at eum, dicam accusamus sea in. Ea vis dico mandamus praesent. 
+                    Nisl wisi integre per ei. Ea pri consul accusam, wisi posse delenit mei ex.
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+    <script>
+		var side_nav = document.getElementById("side_bar");
+		var content = document.getElementById("con");
+
+		function sidenav_open()
+		{
+			content.style.opacity = "0.1";
+			side_nav.style.width = "250px";
+		}
+
+		function sidenav_close()
+		{
+			content.style.opacity = "1";
+			side_nav.style.width = "0";
+		}
+	</script>
+</body>
+</html>

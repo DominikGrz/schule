@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aufgabe 8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <nav id='navio'>
+        <a href='../../../../exercises.php'>Zurück zur Seite</a>
+    </nav>
+    <br>
+    <br>
+    <div style="margin-left: 50%; margin-right: auto;">
+        
+    </div>
+
+    <div style="margin-left: calc(50% - 95px); margin-right: auto; padding-bottom: 10px;">
+    <input id="tbox" type="text"><br>
+    <input onclick="crypt()" type="submit" value="Konvertieren" style="width: 183px;"><br><br>
+    <div id="res" style="text-align: center; color: #FFF; background-color: #666666; border-radius: 17.5px; padding: 10px; width: 240px; margin-left: calc(50% - 130px); margin-right: auto;"></div>
+    </div>
+
+    <script lang="JavaScript">
+
+    function crypt()
+    {
+        var text = document.getElementById("tbox").value;
+        var res = document.getElementById("res");
+        var newText = "";
+        var result = "";
+        var z = 0;
+
+        var alph = ["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
+        var vocals = ["a", "e", "i", "o", "u"];
+        var special = [",", ";", ".", "-", ":"];
+
+        for(var i = 0; i < text.length; i++){
+            for(var j = 0; j < vocals.length; j++){
+                if((text.substr(i, 1)).toLowerCase() == vocals[j]){
+                    newText += "*";
+                    break;
+                } else if(text.substr(i, 1) == special[j]){ 
+                    newText += " ";
+                    break;
+                }
+            }
+            
+            for(var j = 0; j < alph.length; j++){
+                if((text.substr(i, 1)).toUpperCase() == alph[j]){
+                    newText += text.substr(i, 1);
+                    break;
+                }
+            }
+        }
+
+        for(var i = text.length; i >= 0; i--){
+            result += newText.substr(i, 1);
+        }
+
+        res.innerHTML = result;
+
+
+    }
+
+</script>
+</body>
+</html>

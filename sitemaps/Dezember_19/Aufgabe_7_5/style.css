@@ -1,0 +1,86 @@
+html, body
+{
+    padding: 0;
+    margin: 0;
+
+
+    overflow: hidden;
+
+    font-family: Calibri;
+    font-size: 16pt;
+}
+
+#navio
+{
+    background-color: #181818;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding-bottom: 15px;
+}
+
+#navio a
+{
+    text-decoration: none;
+    font-size: 16pt;
+    color: #FFF;
+}
+
+.box-1
+{
+    background-color: #be6602;
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    
+    transition: all 3s;
+
+}
+
+.box-1:hover
+{
+    width: 1200px;
+}
+
+.box-2
+{
+    background-color: #ad0000;
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    
+    transition: all 0.7s;
+
+}
+
+.box-2:hover
+{
+    transform: scale(1.5);
+}
+
+.box-3
+{
+    background-color: #28b305;
+    position: absolute;
+    left: 500px;
+    top: 300px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+
+    transform: rotate(45deg);
+    
+    transition: all 1.2s;
+
+}
+
+.box-3:hover
+{
+    transform: rotate(765deg);
+}

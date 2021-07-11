@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Eine tolle Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta lang="de"/>
+    <meta name="author" content=""/>
+    <meta name="description" content="A personal test site."/>
+    <meta name="keywords" content="Abstract, School, Schule, Aufgaben, Projekt, Informatik, Webdesign">
+    <meta name="robots" content="index, follow">
+    <meta name="title" content="A test site">
+    <meta name="audience" content="Everyone">
+</head>
+<body>
+    <div class="bg-blur"></div>
+
+    <div id="side_bar" class="sidebar">
+		<span onclick="sidenav_close();" class="sidebar_but">✖</span>
+		<a href="index.html">home</a>
+		<a href="exercises.php">exercises</a>
+		<a href="#">about</a>
+	</div>
+
+    <span onclick="sidenav_open();" class="sidebar_but">≡</span>
+    
+    <div id="con" class="container">
+        <div class="header">
+			<div id="nav">
+				<nav>
+					<a href="index.html">home</a> <a href="exercises.php">exercises</a> <a href="#">about</a>
+				</nav>
+			</div><a data-active="active" id="icon-link" onclick="check_night_mode();"><span class="icon" id="m-icon"></span></a>
+            <div class="site-title impressum">
+                <h1>
+                    Impressum
+                </h1>         
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="entry">
+                <div class="entry con">
+                    <div><p>Angaben gemäß § 5 TMG</p><p>Dominik Grzesik <br>
+                    Asdastr. 92<br> 
+                    55858 Irgendwo <br> 
+                    </p><p> <strong>Vertreten durch: </strong><br>
+                    Dominik Grzesik<br>
+                    </p><p><strong>Kontakt:</strong> <br>
+                    Telefon: 02111234567<br>
+                    E-Mail: <a href='mailto:anemail@dsntexist.com'>anemail@dsntexist.com</a></br></p><p><strong>Haftungsausschluss: </strong><br><br><strong>Haftung für Links</strong><br><br>
+                    Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.<br><br><strong>Urheberrecht</strong><br><br>
+                    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.<br><br><strong>Datenschutz</strong><br><br>
+                    Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. <br>
+                    Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. <br>
+                    Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.<br>
+                    </p>
+                    </div> 
+                </div>
+            </div>
+
+        </div><a class="top-but" id="eksde">
+		<div>
+			^
+		</div></a>
+        <div class="footer">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+    <script>
+		var side_nav = document.getElementById("side_bar");
+		var content = document.getElementById("con");
+
+		function sidenav_open()
+		{
+			content.style.opacity = "0.1";
+			side_nav.style.width = "250px";
+		}
+
+		function sidenav_close()
+		{
+			content.style.opacity = "1";
+			side_nav.style.width = "0";
+		}
+	</script>
+</body>
+</html>

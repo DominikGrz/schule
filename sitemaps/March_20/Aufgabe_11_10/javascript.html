@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aufgabe 10</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style.css">
+    <script src="../../../main.js"></script>
+</head>
+
+<body>
+    <nav id='navio'>
+        <a href='../../../../exercises.php'>Zurück zur Seite</a>
+    </nav>
+    <br>
+    <br>
+    <div style="margin-left: 50%; margin-right: auto;">
+
+    </div>
+
+    <script lang="JavaScript">
+        function sendMail() {
+            var xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.open("GET", "mail.php?q=true", true);
+            xmlhttp.send();
+        }
+
+        window.onload = function() {
+            var z = 3;
+
+            if (window.localStorage.getItem("access") == null) {
+                window.localStorage.setItem("access", "true");
+            }
+
+            if (window.localStorage.getItem("access") == "true") {
+                for (var i = 0; i < z; i++) {
+                    var e = prompt("Bitte Passwort eingeben", "Passwort");
+
+                    if (e == "12347") {
+                        alert("Das Passwort ist richtig!");
+                        window.location.replace("password.html");
+                        break;
+                    } else {
+                        alert("Falsches Passwort!");
+                    }
+                }
+                if (i == 3) {
+                    alert("Der Zutritt dieser Seite wird nun gesperrt.")
+                    window.localStorage.setItem("access", "false");
+                    sendMail();
+                    window.location.replace("../../../exercises.php");
+                }
+
+            } else {
+                alert("Der Zugriff dieser Seite wurde Ihnen gesperrt.");
+                window.location.replace("../../../exercises.php");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+#container
+{
+	border-style: solid;
+	border: 2px solid #ff0000;
+	padding: 0;
+	width: 1024px;
+	height: 500px;
+	margin-left: 306px;
+}
+
+#kopf
+{
+	margin: 20px 200px 0 200px;
+	background-color: gray;
+	border: 2px solid #ff0000;
+	border-width: 1px;
+}
+
+#nav
+{
+	padding: 0;
+	margin: 0 200px 0 200px;
+	background-color: gray;
+	text-align: center;
+	border: 2px solid #01368c;
+	border-width: 1px;
+	height: 20px;
+}
+
+#content
+{
+	padding: 0;
+	margin: 0 200px 0 200px;
+	background-color: gray;
+	text-align: center;
+	border: 2px solid #046d27;
+	border-width: 1px;
+	height: 300px;
+}

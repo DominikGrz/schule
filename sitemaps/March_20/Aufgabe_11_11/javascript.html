@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aufgabe Testfunktionen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style.css">
+    <script src="../../../main.js"></script>
+
+    <style>
+        #left
+        {
+            background-color: #e2e2e2;
+
+            padding: 7.5px;
+            padding-left: 12.5px;
+        }
+        #right
+        {
+            background-color: #a5a5a5;
+
+            padding: 7.5px;
+            padding-left: 12.5px;
+        }
+
+    </style>
+
+</head>
+<body onload="test5(), test7()">
+
+    <nav id='navio'>
+        <a href='../../../../exercises.php'>Zurück zur Seite</a>
+    </nav>
+    <br>
+    <br>
+
+    <div style="margin-left: calc(50vw - 325px);">
+      
+    <table style="text-align: center; width: 50%;">
+        <tr>
+            <th id='left'></th>
+            <th id='right'>Testfunktion</th>
+            <th id='left'>Eingabe</th>
+        </tr>
+        <tr>
+            <td id='left'>1</td>
+            <td id='right'>x^10</td>
+            <td id='left'><input id="val1" type="number"><br><input onclick="test1()" type="submit"></td>
+        </tr>
+        <tr>
+            <td id='left'>2</td>
+            <td id='right'>Fakultät</td>
+            <td id='left'><input id="val2" type="number"><br><input onclick="test2()" type="submit"></td>
+        </tr>
+        <tr>
+            <td id='left'>3</td>
+            <td id='right'>Basis^Exp</td>
+            <td id='left'><input id="val3" type="number" placeholder="Basis"><br><input id="val4" type="number" placeholder="Exponent"><br><input onclick="test3()" type="submit"></td>
+        </tr>
+        <tr>
+            <td id='left'>4</td>
+            <td id='right'>Besuchszeit der Website</td>
+            <td id='left'><input onclick="test4()" type="submit"></td>
+        </tr>
+        <tr>
+            <td id='left'>5</td>
+            <td id='right'>Tage bis Sommerferien ausgeben</td>
+            <td id='left'><p id="sferien">hdfdfh</p></td>
+        </tr>
+        <tr>
+            <td id='left'>6</td>
+            <td id='right'>Datumsvalidierung</td>
+            <td id='left'><input id="day" type="text" placeholder="DD" size="2"><input id="month" type="text" placeholder="MM" size="2"><input id="year" type="text" placeholder="YYYY" size="4"><br><input onclick="test6()" type="submit"></td>
+        </tr>
+        <tr>
+            <td id='left'>7</td>
+            <td id='right'>Browser Informationen</td>
+            <td id='left'><p id="binfo"></p></td>
+        </tr>
+    </table>
+    <br>
+    </div>
+    <script lang="JavaScript">
+
+        function test1(){
+            var val = document.getElementById("val1").value;
+            var x = val;
+
+            for(var i = 1; i < 10; i++){
+                x *= val;
+            }
+
+            alert("Ergebnis: " + x);
+        }
+
+        function test2(){
+            var val = document.getElementById("val2").value;
+            var x = 1;
+
+            for(var i = 1; i < val; i++){
+                x *= (i + 1);
+            }
+
+            alert("Ergebnis: " + x);
+        }
+
+        function test3(){
+            var val = document.getElementById("val3").value;
+            var exp = document.getElementById("val4").value;
+            var x = val;
+
+            if(exp < 0){
+                alert("Bitte geben Sie einen Wert >= 0 ein.");
+            } else if(exp == 0) {
+                x = 1;
+                alert("Ergebnis: " + x);
+            } else {
+                for(var i = 1; i < exp; i++){
+                    x *= val;
+                }
+                alert("Ergebnis: " + x);
+            }
+        }
+
+        function test4(){
+            var time = window.localStorage.getItem("time");
+            var x = parseInt(time);
+            var min = x / 60;
+            var sec = x % 60;
+            var h = min / 60;
+
+            if(x >= 60 && min < 60){
+                alert("Du bist schon auf dieser Website " + Math.round(min) + " Minuten und " + sec + " Sekunden.");
+            } else if(min >= 60) {
+                alert("Du bist schon auf dieser Website " + Math.trunc(h) + " Stunden " + Math.round(min % 60) + " Minuten und " + sec + " Sekunden.");
+            } else {
+                alert("Du bist schon auf dieser Website " + sec + " Sekunden.");
+            }
+        }
+
+        function test5(){
+            var d1 = new Date();
+            var d2 = new Date();
+            var res = document.getElementById("sferien");
+
+            d1.setFullYear(2019);
+            d1.setMonth(6);
+            d1.setDate(15);
+            
+            var diff = (d1 - d2) / (24*3600*1000);
+            
+            res.innerHTML = "Die Sommerferien sind in " + diff + " Tagen."
+        }
+
+        function test6(){
+            var day = document.getElementById("day").value;
+            var month = document.getElementById("month").value;
+            var year = document.getElementById("year").value;
+
+            if(year >= 1 && year <= 9999){
+                if(month >= 1 && month <= 12){
+                    if(day >= 1 && day <= 31){
+                        if(day > 30 && (month == 4 || month == 6 || month == 9 || month == 11) || (day > 28 && month == 2)){
+                            alert("Fehler.");
+                        } else{
+                            alert("Datum ist valide.");
+                        }
+                 } else alert("Fehler.");
+                } else alert("Fehler.");
+            } else alert("Fehler.");
+        }
+        
+        function test7(){
+            
+            var res = document.getElementById("binfo");
+            
+           function getBrowser() {
+              var ua = navigator.userAgent,
+                tem, M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+              if (/trident/i.test(M[1])) {
+                tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+                return {
+                  name: 'IE',
+                  version: (tem[1] || '')
+                }; 
+              }
+              if (M[1] === 'Chrome') {
+                tem = ua.match(/\bOPR|Edge\/(\d+)/)
+                if (tem != null) {
+                  return {
+                    name: 'Opera',
+                    version: tem[1]
+                  };
+                }
+              }
+              M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+              if ((tem = ua.match(/version\/(\d+)/i)) != null) {
+                M.splice(1, 1, tem[1]);
+              }
+              return {
+                name: M[0],
+                version: M[1]
+              };
+            }
+            
+            var OSName="Unbekanntes Betriebssystem";
+                if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+                if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+                if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+                if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+                
+            var plugins = navigator.plugins.length;
+            
+            if(navigator.cookieEnabled == true){
+                var cookie = "Ja";
+            } else {
+                var cookie = "Nein";
+            }
+            
+            res.innerHTML = "Browser: " + getBrowser().name + "</br> Version: " + getBrowser().version + "<br> Betriebssystem: " + OSName + " <br> Plugins: " + plugins + "<br> Auflösung: " 
+            + window.screen.width + "x" + window.screen.height + 
+            "<br> Verfügbare Auflösung: " + window.screen.availWidth + "x" + window.screen.availHeight + 
+            "<br> Farbtiefe: " + screen.colorDepth + "<br> Cookies erlaubt?: " + cookie;
+        }
+
+    </script> 
+</body>
+</html>

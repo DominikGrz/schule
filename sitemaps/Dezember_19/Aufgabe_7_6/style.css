@@ -1,0 +1,85 @@
+html, body
+{
+	padding: 0;
+	margin: 50px;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	overflow: auto;
+
+	font-family: 'Calibri';
+	font-size: 20pt;
+}
+
+.con
+{
+	display: grid;
+	grid-column-start: auto;
+
+	grid-gap: 20px;
+
+	padding: 5%;
+	margin: auto;
+
+	grid-template-columns: 100px 2fr 150px;
+	grid-template-rows: 125px 600px 75px;
+
+	grid-template-areas: 
+		"header header header"
+		"conte  conte sidebar"
+		"footer footer footer"
+}
+
+.header
+{
+	background-color: #6e6e6e;
+	text-align: center;
+	grid-area: header;
+}
+
+.content
+{
+	background-color: #b1b1b1;
+	text-align: center;
+	grid-area: conte;
+}
+
+.sidebar
+{
+	background-color: #3f3f3f;
+	grid-area: sidebar;
+}
+
+.footer
+{
+	background-color: #313131;
+	text-align: center;
+	grid-area: footer;
+}
+
+#navio
+{
+	color: #000;
+}
+
+#navio li
+{
+	list-style-type: none;
+}
+
+#navio a, a:visited, a:link
+{
+	text-decoration: none;
+	color: #000;
+	transition: color 0.6s;
+}
+
+#navio a:hover	
+{
+	color: #ffffff;
+}
+
+h3
+{
+	text-align: center;
+}

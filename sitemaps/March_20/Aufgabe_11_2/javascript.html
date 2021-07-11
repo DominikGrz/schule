@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Aufgabe 2</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="../style.css">
+
+  <script src="../../../main.js"></script>
+
+
+
+  <style>
+    #left {
+
+      background-color: #e2e2e2;
+
+      padding: 7.5px;
+
+      padding-left: 12.5px;
+
+    }
+
+
+
+    #right {
+
+      background-color: #a5a5a5;
+
+      padding: 7.5px;
+
+      padding-left: 12.5px;
+
+    }
+  </style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+  <nav id='navio'>
+
+    <a href='../../../../exercises.php'>Zurück zur Seite</a>
+
+  </nav>
+
+  <br>
+
+  <br>
+
+  <div style="margin-left: calc(50% - 130px); margin-right: auto; padding-bottom: 10px;">
+
+    <input id="tbox" type="number">
+
+    <select id="sel">
+
+      <option value="1" selected="selected">MBAR</option>
+
+      <option value="2">PSI</option>
+
+    </select>
+
+    <br>
+
+    <input onclick="umrechnen()" type="submit" value="Berechnen" style="width: 183px;"><br><br>
+
+  </div>
+
+
+
+  <div id="res"
+    style="text-align: center; color: #FFF; background-color: #666666; border-radius: 17.5px; padding: 10px; width: 240px; margin-left: calc(50% - 130px); margin-right: auto;">
+    0</div>
+
+
+
+  <script lang="JavaScript">
+
+    function umrechnen() {
+
+
+
+      var res = document.getElementById("res");
+
+      var val = document.getElementById("tbox").value;
+
+      var e = document.getElementById("sel");
+
+      var sel = e.options[e.selectedIndex].text;
+
+
+
+      var chv = 0.06894757293;
+
+
+
+      if (val != "" && val != 0) {
+
+
+
+        if (sel == "PSI") {
+
+
+
+          var x = Math.round((val / 68.948) * 10) / 10;
+
+          res.innerHTML = x + " mbar";
+
+
+
+        } else if (sel == "MBAR") {
+
+          var x = Math.round((val * 68.948) * 10) / 10;
+
+          res.innerHTML = x + " psi";
+
+        }
+
+
+
+      } else alert("Bitte geben Sie einen gültigen Wert ein.")
+
+
+
+    }
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

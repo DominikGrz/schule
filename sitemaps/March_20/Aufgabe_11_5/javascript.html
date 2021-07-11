@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aufgabe 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style.css">
+    <script src="../../../main.js"></script>
+</head>
+<body>
+    <nav id='navio'>
+        <a href='../../../../exercises.php'>Zurück zur Seite</a>
+    </nav>
+    <br>
+    <br>
+    <div style="margin-left: 50%; margin-right: auto;">
+        
+    </div>
+
+    <div style="margin-left: calc(50% - 100px); margin-right: auto; padding-bottom: 10px; width: 183px;">
+    <p>Verschlüsselte e-mail: <br><b>WHVWHPDLO5HADPSOH0FRP</b></p><br>
+    <input id="tbox" type="text" style="width: calc(100% - 4px);"><br><br>
+    <input onclick="crypt()" type="submit" value="Verschlüsseln" style="width: 100%;"><br>
+    <input onclick="decrypt()" type="submit" value="Entschlüsseln" style="width: 100%;"><br><br>
+    </div>
+
+    <script lang="JavaScript">
+
+    function crypt()
+    {
+        var clean = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+        var key =   ["D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "A", "B", "C"]
+
+        var numbers = [    0,   1,   2,   3,   4,   5,   6,   7,   8,   9];
+        var numbersKey = ["-", ".", "*", "#", "ä", "ü", "&", "%", "$", "§"]
+
+        var specialKey = [".", "@"];
+        var specialNumA = [0, 1, 2, 3, 4];
+        var specialNumB = [5, 6, 7, 8, 9];
+
+        var email = document.getElementById("tbox").value;
+        var newEmail = "";
+
+        for(var i = 0; i < email.length; i++){
+            for(var j = 0; j < clean.length; j++){
+                if ((email.substr(i, 1)).toUpperCase() == clean[j]) {
+                    newEmail += key[j];
+                    break;
+                } else if ((email.substr(i, 1)).toUpperCase() == specialKey[0]) {
+                    var rand = Math.random() * 5;
+                    newEmail += specialNumA[Math.trunc(rand)];
+                    break;
+                } else if ((email.substr(i, 1)).toUpperCase() == specialKey[1]) {
+                    var rand = Math.random() * 5;
+                    newEmail += specialNumB[Math.trunc(rand)];
+                    break;
+                } else if (email.substr(i, 1) == numbers[j]){
+                    newEmail += numbersKey[j];
+                }
+            }
+        }
+
+        alert(newEmail);
+    }
+
+    function decrypt()
+    {
+        var clean = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+        var key =   ["D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "A", "B", "C"]
+
+        var numbers = [    0,   1,   2,   3,   4,   5,   6,   7,   8,   9];
+        var numbersKey = ["-", ".", "*", "#", "ä", "ü", "&", "%", "$", "§"]
+        var specialKey = [".", "@"];
+
+        var email = document.getElementById("tbox").value;
+        var newEmail = "";
+
+        for(var i = 0; i < email.length; i++){
+            for(var j = 0; j < clean.length; j++){
+                if ((email.substr(i, 1)).toUpperCase() == key[j]) {
+                    newEmail += clean[j];
+                    break;
+                } else if ((email.substr(i, 1)).toUpperCase() >= 0 && (email.substr(i, 1)).toUpperCase() <= 4) {
+                    newEmail += specialKey[0];
+                    break;
+                } else if ((email.substr(i, 1)).toUpperCase() >= 5 && (email.substr(i, 1)).toUpperCase() <= 9) {
+                    newEmail += specialKey[1];
+                    break;
+                } else if (email.substr(i, 1) == numbersKey[j]){
+                    newEmail += numbers[j];
+                }
+            }
+        }
+
+        alert(newEmail.toLowerCase());
+    }
+
+
+
+
+</script>
+</body>
+</html>

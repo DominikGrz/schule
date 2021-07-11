@@ -1,0 +1,4 @@
+Eingabe:
+             Kapital: 50000
+             Zinssatz: 3.95
+            Ergebnis: 60686.55

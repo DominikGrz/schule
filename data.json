@@ -1,0 +1,71 @@
+{
+    "entry":
+    [
+        {
+        "title": "Dezember 2020",
+        "aufgaben":[
+            {"id": "SQL: 5.1", "text": "Stelle Vorname, Name und Stadt der Ansprechpartner der Kunden tabellarisch dar.", "href": "sitemaps/Dezember_20/Aufgabe_1/"},                
+            {"id": "SQL: 5.2", "text": "Liste alle Bestellungen mit dem Status 'On Hold' und 'Disputed' auf.", "href": "sitemaps/Dezember_20/Aufgabe_2/"},
+            {"id": "SQL: 5.3", "text": "Erweitere Nr. 2 und ersetze die Kunden Nr. durch Kundennamen und Status durch Comment.", "href": "sitemaps/Dezember_20/Aufgabe_3/"},
+            {"id": "SQL: 5.4", "text": "Stelle Vorname, Name und Stadt der Ansprechpartner der Kunden tabellarisch dar.", "href": "sitemaps/Dezember_20/Aufgabe_4/"},
+            {"id": "5", "text": "Mit Session passwortgeschützte Seite machen.", "href": "sitemaps/Dezember_20/Aufgabe_5/"},
+            {"id": "6", "text": "QR mit Formular.", "href": "sitemaps/Dezember_20/Aufgabe_6/"},
+            {"id": "7", "text": "Schreibe eine Introseite mit Cookies die beim zweiten Aufruf übersprungen wird.", "href": "sitemaps/Dezember_20/Aufgabe_7/"},
+            {"id": "8", "text": "Erzeuge eine PDF mithilfe von der FPDF-Library.", "href": "sitemaps/Dezember_20/Aufgabe_8/"},
+            {"id": "9", "text": "Sammel mit einem Formular Daten in einer Datei.", "href": "sitemaps/Dezember_20/Aufgabe_9/"}
+        ]
+        },
+        {
+        "title": "Mai 2020",
+        "aufgaben":[
+            {"id": "1.1", "text": "Suche nach einem Währungsrechner und füge ihn der Seite hinzu.", "href": "sitemaps/March_20/Aufgabe_11_1/javascript.html"},
+            {"id": "1.2", "text": "Programmiere einen Umrechner von mbar zu psi.", "href": "sitemaps/March_20/Aufgabe_11_2/javascript.html"},
+            {"id": "1.3", "text": "Blockiere das Kontextmenü des Rechtsklicks.", "href": "sitemaps/March_20/Aufgabe_11_3/javascript.html"},
+            {"id": "1.4", "text": "Suche ein Javascript, welches eine Laufschrift in der Statuszeile erzeugt.", "href": "sitemaps/March_20/Aufgabe_11_4/javascript.html"},
+            {"id": "1.5", "text": "Programmiere eine Verschlüsselung für eine e-mail Adresse.", "href": "sitemaps/March_20/Aufgabe_11_5/javascript.html"},
+            {"id": "1.6", "text": "Unterschiede zwischen Java und Javascript.", "href": "sitemaps/March_20/Aufgabe_11_6/javascript.html"},
+            {"id": "1.7", "text": "Programmiere eine Validierung einer e-mail Adresse.", "href": "sitemaps/March_20/Aufgabe_11_7/javascript.html"},
+            {"id": "1.8", "text": "Lese ein Text ein und ersetze Vokale durch * und entferne Sonderzeichen.", "href": "sitemaps/March_20/Aufgabe_11_8/javascript.html"},
+            {"id": "1.9", "text": "Programmiere einen Passwortschutz.", "href": "sitemaps/March_20/Aufgabe_11_9/javascript.html"},
+            {"id": "1.10", "text": "Erweitere den Passwortschutz.", "href": "sitemaps/March_20/Aufgabe_11_10/javascript.html"},
+            {"id": "1.11", "text": "Schreibe einige Testfunktionen.", "href": "sitemaps/March_20/Aufgabe_11_11/javascript.html"}
+        ]
+        },
+        
+        { 
+        "title": "Februar 2020",
+        "aufgaben":[
+            {"id": "2.4", "text": "Was kostet alternativ der Betrieb eines passenden Serverangebots beim Provider 1und1.de?", "href": "sitemaps/Februar_20/Aufgabe_2_4/index.html"},
+            {"id": "4.1", "text": "Berechne mit PHP das Endkapital am Jahresende für die ersten 5 Jahre. Gib das Ergebnis in einer Tabelle aus.", "href": "sitemaps/Februar_20/Aufgabe_4_1/index.php"},
+            {"id": "4.2", "text": "Berechne mit PHP das Endkapital am Monatssende für die ersten 60 Monate. Gib das Ergebnis in einer Tabelle aus.", "href": "sitemaps/Februar_20/Aufgabe_4_2/index.php"},
+            {"id": "5.1", "text": "Stelle in Tabellenform n und x mit Hilfe eines PHP-Programms dar. Was beobachtest du? Wie groß muss n werden, damit die ersten 4. Stellen nach dem Komma der Euler'schen Zahl exakt berechnet werden?", "href": "sitemaps/Februar_20/Aufgabe_5_1/index.php"},
+            {"id": "5.2", "text": "Stelle in Tabellenform die Werte n=1 bis n=100, die zugehörigen Näherungswerte für e und die Abweichung vom exakten Werte für e mit Hilfe eines PHP-Programms dar.", "href": "sitemaps/Februar_20/Aufgabe_5_2/index.php"},
+            {"id": "5.3", "text": "Schreibe ein Programm, dass die Euler'sche Zahl bis auf 6 Stellen nach dem Komma genau darstellt.", "href": "sitemaps/Februar_20/Aufgabe_5_3/index.php"},
+            {"id": "5.4", "text": "Stelle in Tabellenform die für die Werte n=1 bis n=20 die Werte für e mit Hilfe eines PHP-Programms dar.", "href": "sitemaps/Februar_20/Aufgabe_5_4/index.php"},
+            {"id": "5.5", "text": "Berechne nun die Zahl π durch Annäherung. Stelle die ersten hundert Näherungsschritte für π in einer Tabelle dar.", "href": "sitemaps/Februar_20/Aufgabe_5_5/index.php"},
+            {"id": "6.1", "text": "Schreibe ein PHP-Programm, dass den aktuellen Wochentag in deutscher Sprache ausgibt.", "href": "sitemaps/Februar_20/Aufgabe_6_1/index.php"},
+            {"id": "6.2", "text": "Schreibe ein PHP-Programm, dass den aktuellen Monat im angegebenen Format ausgegeben wird.", "href": "sitemaps/Februar_20/Aufgabe_6_2/index.php"},
+            {"id": "6.3", "text": "Schreibe ein PHP-Programm, dass das Datum ausgibt, die Tage bis zu den nächsten Sommerferien, die Tage, die im neuen Jahrtausend vergangen sind. Außerdem das Datum von heute in 14 Tagen.", "href": "sitemaps/Februar_20/Aufgabe_6_3/index.php"},
+            {"id": "7", "text": "Erweitere das Programm aus Lektion 4 Aufgabe 1 um ein Eingabefeld für das Startkapital und fasse Eingabe und Ausgabe des Programms in einer Datei zusammen.", "href": "sitemaps/Februar_20/Aufgabe_7/index.php"},
+            {"id": "8.1", "text": "Erweitere das Programm aus Lektion 4 Aufgabe 1 um ein Eingabefeld für das Startkapital und fasse Eingabe und Ausgabe des Programms in einer Datei zusammen.", "href": "sitemaps/Februar_20/Aufgabe_8_1/index.php"},
+            {"id": "8.2", "text": "Schreibe in einer PHP Datei ein Programm, dass nach Name und Geburtsjahr fragt und das Alter in Jahren berechnet und ausgibt.", "href": "sitemaps/Februar_20/Aufgabe_8_2/index.php"},
+            {"id": "8.3", "text": "Schreibe ein Programm, dass nach Name und Geburtsdatum fragt und das Alter in Tagen, Monaten und Jahren ausgibt.", "href": "sitemaps/Februar_20/Aufgabe_8_3/index.php"},
+            {"id": "8.4", "text": "Schreibe ein Programm, dass aus der Anzahl der CDs, die Kosten, die Versandkosten, den Nettobetrag, die MwSt, den Gesamtbetrag und den Skontobetrag ausrechnet.", "href": "sitemaps/Februar_20/Aufgabe_8_4/index.php"},
+            {"id": "8.5", "text": "Schreibe ein Programm, dass überprüft, ob er/sie als Bundeskanzler oder Bundespräsident gewählt werden darf.", "href": "sitemaps/Februar_20/Aufgabe_8_5/index.php"},
+            {"id": "Ports", "text": "Liste min. 10 Ports und ihre Funktion auf.", "href": "sitemaps/Februar_20/Aufgabe_port/index.html"}
+        ]
+    },
+    
+    {
+        "title": "Dezember 2019",
+        "aufgaben":[
+            {"id": "1", "text": "Erstelle eine mehrsprachige Willkommensseite.", "href": "sitemaps/Dezember_19/Aufgabe_7_1/index.html"},
+            {"id": "2", "text": "Erstelle ein Layout mit waagerechtem Menü, funktionierende Navigation.", "href": "sitemaps/Dezember_19/Aufgabe_7_2/index.html"},
+            {"id": "3", "text": "Layout 3 spaltig, funktionierende Navigation.", "href": "sitemaps/Dezember_19/Aufgabe_7_3/index.html"},
+            {"id": "4", "text": "CSS3 Bewegungseffekte, hover, Maus.", "href": "sitemaps/Dezember_19/Aufgabe_7_5/index.html"},
+            {"id": "5", "text": "Devices - Layout für Drucker und Smartphone", "href": "sitemaps/Dezember_19/Aufgabe_7_4/index.html"},
+            {"id": "6", "text": "Erstelle ein Grid Layout.", "href": "sitemaps/Dezember_19/Aufgabe_7_6/index.html"}
+        ]
+    }     
+    ]
+}

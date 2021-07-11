@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aufgabe 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style.css">
+    <script src="../../../main.js"></script>
+    <style>
+        *{
+            overflow: hidden;
+            border: 0px;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body onload="lauf()">
+    <nav id='navio'>
+        <a href='../../../../exercises.php'>Zurück zur Seite</a>
+    </nav>
+    <br>
+    <br>
+    <div style="margin-left: 50%; margin-right: auto;">
+        
+    </div>
+
+    <form name="zeile">
+        <input name="fenster" type="text" size="700" style="position: absolute; left: 0; bottom: 0; font-size: 40px;">
+    </form>
+</body>
+
+<script language=JavaScript>
+        var text = " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Willkommen auf meiner Website ((: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+
+        function lauf()
+        {
+           text = text.slice(1,text.length)+text.slice(0,1);
+           document.zeile.fenster.value=text;
+           window.setTimeout("lauf()",75)
+        }
+        window.setTimeout("lauf()",75);
+     </script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Aufgabe 1</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../style.css">
+  <script src="../../../main.js"></script>
+  <script>
+    window.console = window.console || function (t) { };
+  </script>
+
+  <script>
+    if (document.location.search.match(/type=embed/gi)) {
+
+      window.parent.postMessage("resize", "*");
+
+    }
+  </script>
+
+</head>
+<nav id='navio'>
+  <a href='../../../../exercises.php'>Zurück zur Seite</a>
+</nav>
+<br>
+<br>
+<div style="margin-left: 46%; margin-right: auto;">
+
+  <body translate="no">
+    <div class="jumbotron">
+      <div class="container">
+        <h2>Währungsrechner</h2>
+        <form class="form-inline">
+          <div class="form-group mb-2">
+            <input type="number" class="form-control" id="amount" />
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <select class="form-control" id="currency-1" required>
+              <option>EUR</option>
+              <option>USD</option>
+            </select>
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <label>konvertieren zu</label>
+            <select class="form-control" id="currency-2" required>
+              <option>EUR</option>
+              <option selected>USD</option>
+            </select>
+          </div>
+          <button class="btn calculate-btn btn-primary mb-2">Berechnen</button>
+        </form>
+        <div class="result">
+          <p>
+            <span class="given-amount"></span>
+            <span class="base-currency"></span>
+            <span class="final-result"></span>
+            <span class="second-currency"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+<script
+  src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+
+<script id="rendered-js">
+  var crrncy = { 'EUR': { 'USD': 1.12 }, 'USD': { 'EUR': 0.90 } };
+  var btn = document.querySelector('.calculate-btn');
+  var baseCurrencyInput = document.getElementById('currency-1');
+  var secondCurrencyInput = document.getElementById('currency-2');
+  var amountInput = document.getElementById('amount');
+  var toShowAmount = document.querySelector('.given-amount');
+  var toShowBase = document.querySelector('.base-currency');
+  var toShowSecond = document.querySelector('.second-currency');
+  var toShowResult = document.querySelector('.final-result');
+  function convertCurrency(event) {
+    event.preventDefault();
+    var amount = amountInput.value;
+    var from = baseCurrencyInput.value;
+    var to = secondCurrencyInput.value;
+    var result = 0;
+    try {
+      if (from == to) {
+        result = amount;
+      } else {
+        result = amount * crrncy[from][to];
+      }
+    }
+    catch (err) {
+      result = amount * (1 / crrncy[to][from]);
+    }
+    toShowAmount.innerHTML = amount;
+    toShowBase.textContent = from + ' = ';
+    toShowSecond.textContent = to;
+    toShowResult.textContent = result;
+  }
+  btn.addEventListener('click', convertCurrency);
+      //# sourceURL=pen.js
+</script>
+<script
+  src="https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
+</body>
+
+</html>
